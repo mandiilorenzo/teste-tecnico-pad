@@ -1,4 +1,5 @@
 import * as S from './style'
+import { GetEmployees } from '../../services/GetEmployees'
 
 export const Employees = () => {
     return (
@@ -21,6 +22,18 @@ export const Employees = () => {
                             <th>Telefone</th>
                         </tr>
                     </thead>
+
+                    <tbody>
+                        {GetEmployees().map(employee => (
+                            <tr key={employee.id}>
+                                <td><img src={employee.image} alt={employee.name} /></td>
+                                <td>{employee.name}</td>
+                                <td>{employee.job}</td>
+                                <td>{employee.admission_date}</td>
+                                <td><span>{employee.phone}</span></td>
+                            </tr>
+                        ))}
+                    </tbody>
                 </S.Table>
             </S.Container>
         </S.Main>

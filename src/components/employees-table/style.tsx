@@ -36,6 +36,7 @@ export const Table = style.table`
     border-collapse: collapse;
     overflow: hidden;
     margin-top: 32px;
+    table-layout: fixed;
 
     th {
     background-color: var(--primary-blue);
@@ -45,5 +46,20 @@ export const Table = style.table`
     font-weight: 500;
     color: var(--white-color);
     text-transform: uppercase;
+    border-radius-top-left: 8px;
+    border-radius-top-right: 8px;
+    }
+
+    td {
+    background-color: var(--white-color);
+    text-align: center;
+    border-bottom: 1px solid var(--neutral-gray);
+    padding: 10px 0;
+    
+    img {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    }
     }
 `
