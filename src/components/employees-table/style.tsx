@@ -21,6 +21,18 @@ export const Container = style.div`
     }
     }
 `
+export const ContainerInput = style.div`
+    position: relative;
+    display: inline-block;
+
+    img {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-40%);
+    cursor: pointer;
+    }
+`
 
 export const Input = style.input`
     width: 287px;
